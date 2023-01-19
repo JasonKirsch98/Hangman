@@ -7,7 +7,7 @@
 # Project to play hangman
 print("Hangman is a simple game where the goal is to guess the hidden word. You are allowed you to guess letters")
 print("or attempt to finish the whole word. Guessing the wrong word will result in a loss.")
-word_choice = input('Pick a word or phrase')  # assigns value
+word_choice = input('Pick a word or phrase :')  # assigns value
 while not (word_choice.isalpha() or word_choice.isspace()):  # check if only letters
     word_choice = input("Error please enter only letters")
 word_choice = word_choice.lower()  # makes all lower case
@@ -23,7 +23,7 @@ incremental = 0
 max_guesses = 5
 while c:  # Retrieve a prompt and compare to word
     print(word)  # show current score
-    guess = input("Guess a letter or word")  # prompts user
+    guess = input("Guess a letter or the word")  # prompts user
     check = 0
     if guess == word_choice:
         print(guess, "was the word! You win!")
@@ -57,5 +57,6 @@ while c:  # Retrieve a prompt and compare to word
         print("You are out of guesses, you lose.")
         print("The correct word was '", word_choice , " '")
         c = False
+
 
   
